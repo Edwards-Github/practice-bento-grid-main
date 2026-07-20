@@ -5,6 +5,21 @@
   --Yellow-500: hsl(39, 100%, 71%);
   --White: hsl(0, 0%, 100%);
   --Black: hsl(0, 0%, 7%);
+
+  /* font sizes*/
+  --fs--2: clamp(0.7813rem, 0.7746rem + 0.0282vw, 0.8rem);
+  --fs--1: clamp(0.9375rem, 0.9155rem + 0.0939vw, 1rem);
+  --fs-0: clamp(1.125rem, 1.081rem + 0.1878vw, 1.25rem);
+  --fs-1: clamp(1.35rem, 1.2752rem + 0.3192vw, 1.5625rem);
+  --fs-2: clamp(1.62rem, 1.5027rem + 0.5005vw, 1.9531rem);
+  --fs-3: clamp(1.944rem, 1.7689rem + 0.7473vw, 2.4414rem);
+  --fs-4: clamp(2.3328rem, 2.0796rem + 1.0801vw, 3.0518rem);
+  --fs-5: clamp(2.7994rem, 2.4418rem + 1.5254vw, 3.8147rem);
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: local("DMSans"), url(assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
 }
 
 * {
@@ -16,6 +31,8 @@
 body {
   margin: 0;
   line-height: 1.5;
+  font-family: DMSans, sans-serif;
+  font-size: var(--fs-0);
 }
 
 h1,
@@ -40,16 +57,47 @@ img {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .attribution {
-  font-size: 0.6875rem;
+  font-size: var(--fs--2);
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
+.bento-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1rem 2rem;
+}
+
 .card-hero {
+  color: var(--White);
   background-color: var(--Purple-500);
+  text-align: center;
+}
+
+.card-hero .card-heading {
+  font-size: var(--fs-4);
+}
+
+.card-heading {
+  font-size: var(--fs-1);
+}
+
+.card-text {
+  font-size: var(--fs-0);
+}
+
+.highlight {
+  color: var(--Yellow-500);
 }
