@@ -87,6 +87,9 @@ ul {
   background-color: var(--Purple-500);
   text-align: center;
   padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-hero .card-heading {
@@ -94,7 +97,7 @@ ul {
 }
 
 .card-heading {
-  font-size: var(--fs-1);
+  font-size: var(--fs-3);
 }
 
 .card-text {
@@ -182,4 +185,46 @@ ul {
 
 .card-ai-content .card-image {
   width: 70%;
+}
+
+@media (min-width: 1400px) {
+  .bento-grid {
+    display: grid;
+    grid-template-areas:
+      "post hero hero hero social"
+      "ai accounts consistent consistent social"
+      "ai growth followers followers followers";
+  }
+
+  .card-hero {
+    grid-area: hero;
+  }
+
+  .card-accounts {
+    grid-area: accounts;
+  }
+
+  .card-schedule-consistent {
+    grid-area: consistent;
+  }
+
+  .card-schedule-social {
+    grid-area: social;
+  }
+
+  .card-grow-followers {
+    grid-area: followers;
+  }
+
+  .card-audience-growth {
+    grid-area: growth;
+  }
+
+  .card-create-post {
+    grid-area: post;
+  }
+
+  .card-ai-content {
+    grid-area: ai;
+  }
 }
