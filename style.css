@@ -25,6 +25,7 @@
 @font-face {
   font-family: "DMSans";
   src: local("DMSans"), url(assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+  font-weight: normal;
 }
 
 @font-face {
@@ -32,6 +33,7 @@
   src:
     local("DMSans Italic"),
     url(assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+  font-weight: normal;
 }
 
 * {
@@ -272,14 +274,14 @@ ul {
     flex-direction: row;
     padding: 1rem 1.5rem;
     img {
-      width: 25%;
+      width: 35%;
     }
   }
 
   .card-grow-followers .card-heading {
     font-size: 26px;
     font-weight: normal;
-    width: 30%;
+    /* width: 30%; */
   }
 
   .card-audience-growth {
